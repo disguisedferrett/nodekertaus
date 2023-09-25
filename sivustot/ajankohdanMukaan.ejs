@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaikki festivaalit</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <h1>Festarit ajankohdan mukaan</h1>
+     <ul id="festaritTable"></ul>
+    <table>
+
+        <tr>
+            <th>Nimi</th>
+            <th>Aika</th>
+            <th>Paikka</th>
+            <th>Artistit</th>
+
+            <tbody id="festaritTable">
+
+                <% if (data.length> 0) { %>
+                    <% for (let festarit of data) { %>
+                        <tr>
+
+                            <td>
+                                <%= festarit.Nimi %>
+                            </td>
+                            <td>
+                                <%= new Date(festarit.Aika).toLocaleDateString() %>
+                            </td>
+                            <td>
+                                <%= festarit.Paikka %>
+                            </td>
+                            <td>
+                                <%= festarit.Artistit %>
+                            </td>
+                        </tr>
+
+                        <% } %>
+                            <% } %>
+        </tr>
+
+    </table>
+
+
+</body>
+
+
+</html>

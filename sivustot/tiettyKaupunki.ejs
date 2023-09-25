@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tietty kaupunki</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+    <h1>Tulokset festivaalin perusteella</h1>
+
+    <table>
+
+        <tr>
+            <th>Festivaali</th>
+            <th>Artistit</th>
+
+
+            <tbody id="festaritTable">
+
+                <% if (data.length> 0) { %>
+                    <% data.forEach(festarit=> { %>
+                        <tr>
+
+                            <td>
+                                <%= festarit.Paikka %>
+                            </td>
+                            <td>
+                                <%= festarit.Artistit %>
+                            </td>
+
+                        </tr>
+                    <% }); %>   
+                             
+                <% } %>
+
+
+        </tr>
+
+    </table>
+</body>
+
+</html>
